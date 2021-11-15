@@ -1,4 +1,5 @@
 ﻿using ObserverPattern.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace ObserverPattern
@@ -31,6 +32,8 @@ namespace ObserverPattern
 
         public void Notificar()
         {
+            var now = DateTime.Now;
+            Console.WriteLine($"Notificação Dia {now.Date.ToShortDateString()} as {now.Hour}:{now.Minute}:{now.Second} ");
             observers.ForEach(observer =>
             {
                 observer.Atualizar(this);

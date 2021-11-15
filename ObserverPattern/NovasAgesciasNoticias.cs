@@ -15,6 +15,8 @@ namespace ObserverPattern
             if (subject is EstacaoMeteorologica estacao)
             {
                 var temp = estacao.temperatura;
+                Console.WriteLine();
+                Console.WriteLine("-------------------------------");
                 Console.WriteLine($"{NomeAgencia} reportando a temperatura {temp} graus celcius");
                 Console.WriteLine("-------------------------------");
             }
